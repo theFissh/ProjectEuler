@@ -15,6 +15,7 @@ namespace ProjectEulerLib
 
         public void SolveProblem()
         {
+            Write("Problem 002 solution:");
             FibonacciSequence();
         }
         public void FibonacciSequence()
@@ -28,14 +29,13 @@ namespace ProjectEulerLib
             double currentLoop = 1;
             while (currentLoop < limit)
             {
-                WriteLine(first);
                 if(CheckIfEven(first)) evenSum += first;
                 third = first + second;
                 first = second;
                 second = third;
                 currentLoop++;
             }
-            WriteLine($" the sum of even numbers is: {evenSum}");
+            WriteLine($" The sum of even numbers is: {evenSum}");
         }
         public bool CheckIfEven(double number)
         {

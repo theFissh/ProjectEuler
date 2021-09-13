@@ -1,4 +1,7 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+
 using static System.Console;
 
 
@@ -16,16 +19,33 @@ namespace ProjectEulerLib
 
         public void SolveProblem()
         {
-            long number = 600851475143;
-            long module = 0;
-            do
+            double number = 600851475143;
+            double remainder = number;
+            double LastPrimeFactor;
+            bool keepLooping = true;
+            while (keepLooping)
             {
-                number %= 2;
-                WriteLine(number);
-                module = number / number;
-                WriteLine(module);
+                Write("Prime factoring the number: " +  remainder);
+                (remainder, LastPrimeFactor) = GetResidual(remainder);
+                WriteLine(" Prime factor: " + LastPrimeFactor + " Remainder: " + remainder);
+                if (remainder <= 1) keepLooping = false;
             }
-            while (module != 1);
+        }
+        (double, double) GetResidual(double last)
+        {
+            double temp2 = 0;
+            double primeFactor = 2;
+            for (double i = 2; i <= last; i++)
+            {
+                double temp = last % i;
+                if (temp == 0)
+                {
+                    temp2 = last / i;
+                    primeFactor = i;
+                    break;
+                }
+            }
+            return (temp2, primeFactor);
         }
     }
 }

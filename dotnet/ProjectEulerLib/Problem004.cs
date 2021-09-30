@@ -10,7 +10,7 @@ namespace ProjectEulerLib
         public int lastBigger = 0;
         public void SolveProblem()
         {
-            int start = 100;
+            int start = 1;
             int limit = 999;
             
             for (int i = start; i <= limit; i++)
@@ -39,11 +39,11 @@ namespace ProjectEulerLib
                 if (firstChar == secondChar)
                 {
                     lastTemp++;
-                    if (lastTemp >= 3)
+                    if (lastTemp >= loops)
                     {
                         results++;
                         if (currentNumber > lastBigger) lastBigger = currentNumber;
-                        WriteLine($"Checking No: {results} == {first} * {second} = {stringToCheck}");
+                        WriteLine($" {results,4} -- Palindromic number found  = {currentNumber,-10}({first,5} * {second,-5})");
                     }
                 }
                 else break;

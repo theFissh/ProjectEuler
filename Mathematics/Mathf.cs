@@ -1,6 +1,6 @@
-﻿namespace maths;
+﻿namespace Mathematics;
 
-public static partial class math
+public static partial class Mathf
 {
     /// <summary>
     /// Return true if the number is even.

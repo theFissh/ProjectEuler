@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  
+
   <ItemGroup>
     <ProjectReference Include="..\Mathematics\Mathematics.csproj" />
   </ItemGroup>
-  
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>Problems_000_100_</RootNamespace>
+    <RootNamespace>Problems_101_200_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>

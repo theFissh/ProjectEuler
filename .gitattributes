@@ -6,4 +6,5 @@
 *.csx      text diff=csharp
 *.sln      text eol=crlf merge=union
 *.csproj   text merge=union
-*.ipynb    linguist-language=csharp
+*.ipynb    text diff=csharp
+# *.ipynb    linguist-language=csharp
